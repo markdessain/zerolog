@@ -3,7 +3,7 @@ package zerolog
 import(
 	"time"
 	"os"
-	"zerolog/log"
+	"github.com/markdessain/zerolog/log"
 )
 
 func Load() {
