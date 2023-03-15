@@ -5,7 +5,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/rs/zerolog"
+	"github.com/markdessain/zerolog"
 )
 
 func isInputFromPipe() bool {
