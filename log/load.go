@@ -10,7 +10,7 @@ import(
 func Load() {
 	zerolog.TimeFieldFormat = time.RFC3339Nano
 	if os.Getenv("ENVIRONMENT") == "development" {
-		Logger =Output(ConsoleWriter{Out: os.Stderr})
+		Logger = Output(zerolog.ConsoleWriter{Out: os.Stderr})
 		Debug().Msg("Development Mode")
 
 		for _, e := range os.Environ() {
