@@ -3,10 +3,12 @@ package log
 import(
 	"time"
 	"os"
+	
+	"github.com/markdessain/zerolog"
 )
 
 func Load() {
-	TimeFieldFormat = time.RFC3339Nano
+	zerolog.TimeFieldFormat = time.RFC3339Nano
 	if os.Getenv("ENVIRONMENT") == "development" {
 		Logger =Output(ConsoleWriter{Out: os.Stderr})
 		Debug().Msg("Development Mode")
